@@ -5,11 +5,6 @@ function clock() {
   var $hour = date.getHours();
   var $minutes = date.getMinutes();
 
-  //Add 0 if hour and minutes are before 10//
-
-  if ($hour < 10) $hour = "0" + $hour;
-  if ($minutes < 10) $minutes = "0" + $minutes;
-
   $("#hour").html($hour);
   $("#minutes").html($minutes);
 
@@ -23,6 +18,10 @@ function clock() {
   } else {
     $("#ampm").html(" ");
   }
+
+  //Add 0 if hour and minutes are before 10//
+  if ($hour < 10) $hour = "0" + $hour;
+  if ($minutes < 10) $minutes = "0" + $minutes;
 
   $("#hour").html($hour);
   $("#minutes").html($minutes);
